@@ -6,16 +6,15 @@ function formatImage(data, outputFormat) {
   const outputFilePath = normalizeOutputPath(data.filename, outputFormat);
 
   return new Promise((resolve, reject) => {
-    gm(inputFilePath)
-      .write(outputFilePath, (err) => {
-        if (err) {
-          reject(new Error(`Failed to format image: ${err.message}`));
-        } else {
-          resolve(outputFilePath);
-        }
-      });
+    gm(inputFilePath).write(outputFilePath, (err) => {
+      if (err) {
+        reject(new Error(`Failed to format image: ${err.message}`));
+      } else {
+        resolve(outputFilePath);
+      }
+    });
   });
-};
+}
 
 function compressImage(data) {
   const inputFilePath = normalizeInputPath(data.filename, data.filetype);
@@ -32,25 +31,20 @@ function compressImage(data) {
         }
       });
   });
-};
+}
 
 function imageMetadata(data) {
   const inputFilePath = normalizeInputPath(data.filename, data.filetype);
 
   return new Promise((resolve, reject) => {
-    gm(inputFilePath)
-      .identify((err, meta) => {
-        if (err) {
-          reject(new Error(`Failed to retrieve image metadata: ${err.message}`));
-        } else {
-          resolve(meta);
-        }
-      });
+    gm(inputFilePath).identify((err, meta) => {
+      if (err) {
+        reject(new Error(`Failed to retrieve image metadata: ${err.message}`));
+      } else {
+        resolve(meta);
+      }
+    });
   });
-};
+}
 
-export {
-  formatImage,
-  compressImage,
-  imageMetadata
-};
+export { formatImage, compressImage, imageMetadata };
