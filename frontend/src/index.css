@@ -1,0 +1,176 @@
+/** Selectors
+* "div p" - p inside div
+* "div ~ p" - div child p
+* "+" - siblings
+* "~" - next sibling
+**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Sans-Serif;
+  text-align: center;
+  color: var(--text-color);
+}
+
+:root {
+  --background-color: black;
+  --text-color: white;
+  --border: white;
+  --choose-file-label: cyan;
+  --submit-btn: orange;
+  --box-shadow: white;
+}
+
+body,
+html {
+  background-color: var(--background-color);
+  padding: 0.6vw;
+}
+
+form #input_file {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+label,
+button {
+  all: unset;
+}
+
+.hidden {
+  display: none;
+}
+
+select {
+  appearance: none;
+  background-color: transparent;
+}
+
+#app {
+  /* border: 1px solid red; */
+}
+
+.full-screen-container {
+  max-height: 100vh;
+}
+
+.header {
+  /* border: 1px solid black; */
+}
+
+.header .nav-bar {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh;
+}
+
+.nav-bar .logo-container {
+  height: 5vh;
+  width: 10vw;
+}
+
+.nav-bar .logo {
+  height: 100%;
+  max-width: 100%;
+}
+
+.header .tagline-wrapper {
+  text-align: center;
+  font-size: 1rem;
+  padding: 4vh;
+}
+
+.main {
+  /* border: 1px solid pink; */
+}
+
+.main .functionality-change-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6vw;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .functionality-change-dropdown,
+  .functionality-change-options {
+    padding: 0.6rem;
+    margin-bottom: 1vh;
+    width: 100%;
+  }
+
+  label {
+    text-align: start;
+    font-size: 0.8rem;
+    margin-bottom: 0.6vh;
+  }
+}
+
+.main .file-upload-handling {
+  /* border: 1px solid blue; */
+  padding: 0.8rem;
+}
+
+.file-upload-handling form {
+  margin-top: 2vh;
+  box-shadow: 0 0 4px var(--box-shadow);
+  border-radius: 4px;
+  background-color:;
+  border: 2px dashed var(--border);
+  padding: 8vh 6vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.cloud-upload-icon {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 100%;
+  min-height: 10vh;
+}
+
+.file-upload-handling label#input-file-label /*choose file label as button*/ {
+  display: inline-block;
+  padding: 4%;
+  margin: 0 4vw;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 2px;
+  border: 1px solid var(--choose-file-label);
+}
+
+.submit-btn,
+.download-btn {
+  padding: 0.6rem;
+  background-color: var(--submit-btn);
+}
+
+.download-btn {
+  background-color: pink;
+}
+
+.uploaded-file-status {
+  /* border: 1px solid blue; */
+
+  .uploaded-file-status-container {
+    /* border: 1px solid red; */
+    padding: 2vh 2vw;
+
+    .file-info {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}

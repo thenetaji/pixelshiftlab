@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/webp" href="/assets/logo.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="rgb(0,0,0)" />
+    <link rel="stylesheet" href="/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0"
+    />
+    <title>PixelShiftLab</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="full-screen-container">
+        <header class="header">
+          <section class="nav-bar">
+            <div class="logo-container">
+              <a href="/" aria-label="Homepage">
+                <img src="/assets/logo.webp" alt="logo" type="image/webp" />
+              </a>
+            </div>
+            <div class="menu"></div>
+          </section>
+          <section class="tagline">
+            <div class="tagline-wrapper">
+              <h1>All your file optimization in one place!</h1>
+            </div>
+          </section>
+        </header>
+        <div class="main">
+          <section class="file-upload-handling">
+            <div class="functionality-change-container">
+              <div>
+                <label for="dropdown">Choose option:</label>
+                <select class="functionality-change-dropdown" id="dropdown">
+                  <option>Compress</option>
+                  <option>Convert Format</option>
+                </select>
+              </div>
+              <div>
+                <label for="change-options">Choose values:</label>
+                <select
+                  class="functionality-change-options"
+                  id="change-options"
+                >
+                  <option></option>
+                </select>
+              </div>
+            </div>
+            <form>
+              <span
+                class="cloud-upload-icon"
+                style="
+                  background-image: url(&quot;/assets/cloud_upload.png&quot;);
+                "
+              ></span>
+              <label for="input_file" id="input-file-label">CHOOSE FILES</label>
+              <input type="file" accept="image/*" id="input_file" />
+              <button type="button" class="submit-btn">Upload & Process</button>
+              <button type="button" class="download-btn hidden">
+                Download
+              </button>
+            </form>
+          </section>
+          <section class="uploaded-file-status hidden">
+            <div class="uploaded-file-status-container"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="/index.js"></script>
+</html>
