@@ -1,6 +1,5 @@
 function fetchData(URL, data) {
-  //const BASE_URL = "https://pixelshiftlab.onrender.com/api/v1";
-  const BASE_URL = "http://localhost:2626/api/v1";
+  const BASE_URL = "https://pixelshiftlab.onrender.com/api/v1";
   const request = new FetchRequest(data);
   console.log("data received in fetchData", data);
   console.log("request object made from data in fetchData", request);
