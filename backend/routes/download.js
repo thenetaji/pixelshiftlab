@@ -36,11 +36,14 @@ async function downloadFile(req, res) {
       message: "Your file has been lost. Maybe it went for a walk.Who knows??",
     });
   }
-  
-  res.setHeader('Content-Type', 'application/octet-stream');
-  res.setHeader('Content-Disposition', `attachment; filename="${data.filename}.${data.filetype}"`);
-  res.setHeader('Access-Control-Expose-Headers', 'Content-Disposition');
-  
+
+  res.setHeader("Content-Type", "application/octet-stream");
+  res.setHeader(
+    "Content-Disposition",
+    `attachment; filename="${data.filename}.${data.filetype}"`,
+  );
+  res.setHeader("Access-Control-Expose-Headers", "Content-Disposition");
+
   res.download(filePath, (err) => {
     if (err) {
       // console.error("Error downloading file:", err);
